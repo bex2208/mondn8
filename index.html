@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
-    <!-- Google Fonts Integration for Baloo 2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&display=swap" rel="stylesheet">
@@ -21,7 +20,6 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            /* Updated to Baloo 2 */
             font-family: 'Baloo 2', sans-serif; 
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
@@ -31,20 +29,14 @@
         }
 
         @keyframes gradientBG {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -56,16 +48,32 @@
         }
 
         h1 {
-            font-size: 2.8rem; /* Bumped up slightly because Baloo looks great larger */
-            font-weight: 800;  /* Thick, playful weight for the main title */
+            font-size: 2.8rem;
+            font-weight: 800;
             margin-bottom: 0.5rem;
             letter-spacing: 0.5px;
         }
 
+        /* Changed to column layout to stack them vertically */
+        .coming-soon-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.75rem;
+        }
+
+        .logo {
+            height: 180px;
+            width: auto;
+            object-fit: contain;
+            margin-top: 12px; /* Adds space between "Coming Soon" and the logo */
+        }
+
         p {
-            font-size: 1.3rem; /* Made the subtext slightly bigger and thicker to match */
+            font-size: 1.3rem;
             opacity: 0.95;
-            font-weight: 600;  /* Clean, highly readable weight for Baloo subtext */
+            font-weight: 600;
             line-height: 1.4;
         }
     </style>
@@ -74,7 +82,10 @@
 
     <div class="container">
         <h1>www.mondn8.de</h1>
-        <p>Coming Soon</p>
+        <div class="coming-soon-wrapper">
+            <p>Coming Soon</p>
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
     </div>
 
 </body>
